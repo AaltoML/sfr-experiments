@@ -1,5 +1,34 @@
 # Function-space Parameterization of Neural Networks for Sequential Learning
-Code accompanying ICLR 2024 submission Function-space Parameterization of Neural Networks for Sequential Learning.
+Code accompanying ICLR 2024 submission *Function-space Parameterization of Neural Networks for Sequential Learning*.
+This repository contains code for reproducing the experiments in the ICLR 2024 paper.
+Please see [this repo](https://github.com/AaltoML/sfr/tree/main) for a clean and minimal implementation of Sparse Function-space Representation of Neural Networks (SFR).
+
+
+<table>
+    <tr>
+        <td>
+            <a href="https://openreview.net/forum?id=2dhxxIKhqz&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2024%2FConference%2FAuthors%23your-submissions)">
+              <strong >Function-space Parameterization of Neural Networks for Sequential Learning</strong><br>
+            </a>
+            Aidan Scannell*, Riccardo Mereu*, Paul Chang, Ella Tamir, Joni Pajarinen, Arno Solin<br>
+            <strong>International Conference on Learning Representations (ICLR 2024)</strong><br>
+            <!-- <a href="https://arxiv.org/abs/2309.02195"><img alt="Paper" src="https://img.shields.io/badge/-Paper-gray"></a> -->
+            <!-- <a href="https://github.com/aidanscannell/sfr"><img alt="Code" src="https://img.shields.io/badge/-Code-gray" ></a> -->
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://arxiv.org/abs/2309.02195">
+              <strong>Sparse Function-space Representation of Neural Networks</strong><br>
+            </a>
+            Aidan Scannell*, Riccardo Mereu*, Paul Chang, Ella Tamir, Joni Pajarinen, Arno Solin<br>
+            <strong>ICML 2023 Workshop on Duality Principles for Modern Machine Learning</strong><br>
+            <!-- <a href="https://arxiv.org/abs/2309.02195"><img alt="Paper" src="https://img.shields.io/badge/-Paper-gray"></a> -->
+            <!-- <a href="https://github.com/aidanscannell/sfr"><img alt="Code" src="https://img.shields.io/badge/-Code-gray" ></a> -->
+        </td>
+    </tr>
+</table>
+
 
 ## Install
 
@@ -33,7 +62,7 @@ See [experiments](./experiments/) for details on how to reproduce the results in
 This includes code for generating the tables and figures.
 
 ## Useage
-See the [notebooks/README.md](./src/notebooks) for how to use our code for both regression and classification.
+See the [notebooks/README.md](./notebooks) for how to use our code for both regression and classification.
 
 ### Example
 Here's a short example:

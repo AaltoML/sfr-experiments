@@ -57,4 +57,4 @@ You can display the base config using:
 ``` shell
 python train_and_inference.py --cfg=job
 ```
-All experiments are detailed in [./configs/experiments](./configs/experiments).
+All experiments are detailed in [./configs/experiments](./cfgs/experiments).
