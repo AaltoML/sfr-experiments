@@ -1,0 +1,20 @@
+# @package _global_
+defaults:
+  - image_classification
+  - override /dataset: fmnist
+  - _self_
+
+##### Training config #####
+lr: 1e-4
+
+# hessian_structures: ["diag"]
+# hessian_structures: ["kron"]
+hessian_structures: ["diag", "kron"]
+
+##### SFR config #####
+sfr:
+  prior_precision: 0.0013
+
+
+wandb:
+  run_name: CNN-prior_precision=${sfr.prior_precision}-seed=${random_seed}-${now:%Y-%m-%d_%H-%M-%S}

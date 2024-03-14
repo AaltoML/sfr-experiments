@@ -1,0 +1,28 @@
+\begin{tabular}{llcccc}
+\toprule
+ &  &  & {\sc nlpd} $\downarrow$ & {\sc acc}. (\%) $\uparrow$ & \rebuttal{{\sc auroc} $\uparrow$} \\
+ &  &  &  &  &  \\
+ & {\sc model} & $M$ &  &  &  \\
+\midrule
+\multirow[c]{10}{*}{\rotatebox[origin=c]{90}{\sc f-mnist}} & \sc nn map & - & \val{0.23}{0.01} & \val{91.98}{0.44} & \rebuttal{\val{0.83}{0.05}} \\
+ & \sc laplace diag & - & \val{2.42}{0.02} & \val{10.21}{0.66} & \rebuttal{\val{0.50}{0.03}} \\
+ & \sc laplace kron & - & \val{2.39}{0.01} & \val{9.87}{0.66} & \rebuttal{\val{0.51}{0.02}} \\
+ & \sc laplace glm diag & - & \val{1.66}{0.02} & \val{65.19}{2.21} & \rebuttal{\val{0.67}{0.03}} \\
+ & \sc laplace glm kron & - & \val{1.09}{0.04} & \val{84.79}{1.96} & \rebuttal{\val{0.96}{0.01}} \\
+ & \rebuttal{\sc gp predictive} & 3200 & \rebuttal{\val{0.47}{0.06}} & \rebuttal{\val{\mathbf{91.51}}{\mathbf{0.45}}} & \rebuttal{\val{\mathbf{0.97}}{\mathbf{0.01}}} \\
+ & \multirow[c]{2}{*}{{\sc gp subset}} & 2048 & \val{0.97}{0.13} & \val{77.32}{8.83} & \rebuttal{\val{0.93}{0.03}} \\
+ &  & 3200 & \val{0.79}{0.09} & \val{82.52}{4.10} & \rebuttal{\val{\mathbf{0.95}}{\mathbf{0.02}}} \\
+ & \multirow[c]{2}{*}{\our (Ours)} & 2048 & \val{\mathbf{0.30}}{\mathbf{0.01}} & \val{\mathbf{91.68}}{\mathbf{0.51}} & \rebuttal{\val{0.95}{0.02}} \\
+ &  & 3200 & \val{\mathbf{0.29}}{\mathbf{0.02}} & \val{\mathbf{91.74}}{\mathbf{0.47}} & \rebuttal{\val{\mathbf{0.96}}{\mathbf{0.01}}} \\
+\multirow[c]{10}{*}{\rotatebox[origin=c]{90}{\sc cifar-10}} & \sc nn map & - & \val{0.69}{0.03} & \val{77.00}{1.04} & \rebuttal{\val{0.85}{0.02}} \\
+ & \sc laplace diag & - & \val{2.37}{0.05} & \val{10.08}{0.24} & \rebuttal{\val{0.48}{0.01}} \\
+ & \sc laplace kron & - & \val{2.36}{0.01} & \val{9.78}{0.41} & \rebuttal{\val{0.49}{0.01}} \\
+ & \sc laplace glm diag & - & \val{1.33}{0.05} & \val{71.96}{1.38} & \rebuttal{\val{\mathbf{0.82}}{\mathbf{0.03}}} \\
+ & \sc laplace glm kron & - & \val{1.04}{0.08} & \val{75.56}{1.63} & \rebuttal{\val{0.64}{0.04}} \\
+ & \rebuttal{\sc gp predictive} & 3200 & \rebuttal{\val{0.90}{0.02}} & \rebuttal{\val{76.07}{1.17}} & \rebuttal{\val{\mathbf{0.79}}{\mathbf{0.02}}} \\
+ & \multirow[c]{2}{*}{{\sc gp subset}} & 2048 & \val{1.18}{0.06} & \val{66.40}{3.69} & \rebuttal{\val{0.71}{0.05}} \\
+ &  & 3200 & \val{1.08}{0.05} & \val{69.75}{3.23} & \rebuttal{\val{0.75}{0.01}} \\
+ & \multirow[c]{2}{*}{\our (Ours)} & 2048 & \val{\mathbf{0.74}}{\mathbf{0.02}} & \val{\mathbf{78.40}}{\mathbf{0.83}} & \rebuttal{\val{\mathbf{0.79}}{\mathbf{0.02}}} \\
+ &  & 3200 & \val{\mathbf{0.72}}{\mathbf{0.02}} & \val{\mathbf{78.48}}{\mathbf{0.98}} & \rebuttal{\val{\mathbf{0.79}}{\mathbf{0.02}}} \\
+\bottomrule
+\end{tabular}

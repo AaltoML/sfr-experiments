@@ -1,0 +1,9 @@
+# @package _global_
+defaults:
+  - uci
+  - override /dataset: cancer
+  - _self_
+
+##### SFR config #####
+sfr:
+  prior_precision: 1e-4

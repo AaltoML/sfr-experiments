@@ -1,0 +1,9 @@
+# @package _global_
+defaults:
+  - uci
+  - override /dataset: satellite
+  - _self_
+
+##### SFR config #####
+sfr:
+  prior_precision: 0.002

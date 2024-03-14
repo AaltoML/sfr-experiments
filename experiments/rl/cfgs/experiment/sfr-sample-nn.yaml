@@ -1,0 +1,12 @@
+# @package _global_
+defaults:
+  - override /reward_model: cartpole
+  - override /transition_model: sfr
+
+alg_name: "sfr-sample-nn"
+
+transition_model:
+  prediction_type: "NN-mean"
+
+agent:
+  unc_prop_strategy: "sample"

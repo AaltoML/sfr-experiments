@@ -1,0 +1,42 @@
+# @package _global_
+defaults:
+  - override /network: si_mlp
+
+##### Experiment config #####
+double_inference: True # True for UCI and False for MNIST/FMNIST/CIFAR10
+
+##### Training config #####
+batch_size: 128 # for training/val/test data
+lr: 1e-4
+n_epochs: 10000
+early_stop:
+  patience: 1000
+  min_prior_precision: 0
+
+##### SFR config #####
+sfr:
+  prior_precision: 1e-4
+
+##### SFR inference config #####
+run_sfr_nn_flag: True # if True, also runs SFR with NN mean predictions
+num_inducings_as_percent: True # if True treat num_inducings as percentages
+num_inducings:
+  - 1
+  - 2
+  - 5
+  - 10
+  - 15
+  - 20
+  - 40
+  - 60
+  - 80
+  - 100
+dual_batch_size: 1000 # needed to keep memory in check
+EPS: 0.01 # 0.01 is good for UCI
+# BO hyperparams for SFR
+posthoc_prior_opt_bo: True
+num_bo_trials: 30 # 30 for UCI and 20 for MNIST/FMNIST/...
+posthoc_prior_opt_grid: False
+
+##### Laplace inference config #####
+hessian_structures: ["diag", "kron", "full"]

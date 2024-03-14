@@ -1,0 +1,28 @@
+# @package _global_
+defaults:
+  - override /network: cnn
+
+##### Training config #####
+batch_size: 128 # for training/val/test data
+lr: 1e-4
+n_epochs: 500
+double_inference: False
+
+##### SFR inference config #####
+run_sfr_nn_flag: True # if True, also runs SFR with NN mean predictions
+num_inducings_as_percent: False
+num_inducings:
+  - 3200
+  - 2048
+  - 1024
+  - 512
+  - 256
+  - 128
+dual_batch_size: 1000 # needed to keep memory in check
+# BO hyperparams for SFR
+posthoc_prior_opt_bo: True
+num_bo_trials: 20 # 30 for UCI and 20 for MNIST/FMNIST/...
+posthoc_prior_opt_grid: False
+
+##### Laplace inference config #####
+hessian_structures: ["diag", "kron"]

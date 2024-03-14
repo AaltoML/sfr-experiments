@@ -1,0 +1,11 @@
+# @package _global_
+defaults:
+  - uci
+  - override /dataset: glass
+  - _self_
+
+n_epochs: 15000
+
+##### SFR config #####
+sfr:
+  prior_precision: 0.003

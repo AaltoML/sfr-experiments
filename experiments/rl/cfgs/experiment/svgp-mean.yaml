@@ -1,0 +1,9 @@
+# @package _global_
+defaults:
+  - override /reward_model: cartpole
+  - override /transition_model: svgp
+
+alg_name: "svgp-mean"
+
+agent:
+  unc_prop_strategy: "mean"

@@ -1,0 +1,11 @@
+# @package _global_
+defaults:
+  - uci
+  - override /dataset: ionosphere
+  - _self_
+
+EPS: 0.1
+
+##### SFR config #####
+sfr:
+  prior_precision: 0.1

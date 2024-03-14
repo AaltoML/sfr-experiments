@@ -1,0 +1,63 @@
+defaults:
+  - reward_model: cartpole # this is a hard coded reward fn
+  - transition_model: sfr
+  # - reward_network: one_layer # not neede with "reward_model: cartpole"
+  - transition_network: one_layer
+  - agent: mppi # mppi or ddpg
+  - env: cartpole_swingup
+  # Use slurm on cluster or local?
+  - override hydra/launcher: slurm
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog
+  - _self_
+
+##### Quick hack (only works for cartpole) #####
+state_dim: 5
+action_dim: 1
+input_dim: 6
+output_dim: 5
+
+##### Algorithm config #####
+alg_name: "sfr-sample"
+action_repeat: 2
+
+##### Experiment config #####
+num_train_episodes: 500
+episode_length: 500
+init_random_episodes: 1
+random_seed: 42
+device: "cuda"
+
+##### Config monitoring #####
+eval_episode_freq: 2
+num_eval_episodes: 5
+save_eval_video: false
+
+##### Replay buffer config #####
+replay_buffer_capacity: 100000
+save_buffer: false
+buffer_scratch_dir: "/tmp/"
+batch_size: 512
+
+##### W&B config #####
+wandb:
+  group: ${env.env_name}-${env.task_name}
+  project: "sfr-rl"
+  use_wandb: True
+  run_name: ${alg_name}__${now:%Y-%m-%d_%H-%M-%S}
+  monitor_gym: True
+  tags:
+    - "random_seed=${random_seed}"
+    - "env=${env.env_name}-${env.task_name}"
+    - "alg=${alg_name}"
+
+##### Hydra config #####
+hydra:
+  verbose: false
+  run:
+    dir: output/hydra/${hydra.job.name}/${now:%Y-%m-%d_%H-%M-%S}
+  job:
+    chdir: true
+  sweep:
+    dir: ${hydra.run.dir}
+    subdir: ${hydra.job.num}

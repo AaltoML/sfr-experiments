@@ -1,0 +1,15 @@
+# @package _global_
+defaults:
+  - image_classification
+  - override /dataset: cifar10
+  - _self_
+
+##### Training config #####
+lr: 1e-3
+
+##### SFR config #####
+sfr:
+  prior_precision: 0.0018
+
+wandb:
+  run_name: CNN-prior_precision=${sfr.prior_precision}-seed=${random_seed}-${now:%Y-%m-%d_%H-%M-%S}

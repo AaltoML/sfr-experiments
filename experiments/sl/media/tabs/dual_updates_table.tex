@@ -1,0 +1,10 @@
+\begin{tabular}{l|l|ll|l|ll}
+\toprule
+ & \multicolumn{3}{c|}{NLPD $\downarrow$} & \multicolumn{3}{c|}{Time (s) $\downarrow$} \\
+ & Train w. $\mathcal{D}_1$ & Updates w. $\mathcal{D}_2$ (Ours) & Retrain w. $\mathcal{D}_1 \cup \mathcal{D}_2$ & Train w. $\mathcal{D}_1$ & Updates w. $\mathcal{D}_2$ (Ours) & Retrain w. $\mathcal{D}_1 \cup \mathcal{D}_2$ \\
+\midrule
+\sc Airfoil & \val{0.60}{0.02} & \val{0.50}{0.02} & \val{0.47}{0.03} & \valtime{19.65}{0.99} & \valtime{0.04}{0.00} & \valtime{18.22}{2.27} \\
+\sc Boston & \val{0.23}{0.01} & \val{0.16}{0.02} & \val{0.13}{0.02} & \valtime{11.45}{1.93} & \valtime{0.02}{0.00} & \valtime{7.48}{0.67} \\
+\sc Protein & \val{0.42}{0.01} & \val{0.15}{0.01} & \val{0.14}{0.00} & \valtime{30.17}{8.62} & \valtime{0.82}{0.06} & \valtime{30.61}{6.27} \\
+\bottomrule
+\end{tabular}

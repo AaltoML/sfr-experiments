@@ -1,0 +1,5 @@
+# @package _global_
+defaults:
+  - uci
+  - override /dataset: waveform
+  - _self_
