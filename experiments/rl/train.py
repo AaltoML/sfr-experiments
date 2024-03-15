@@ -1,29 +1,29 @@
 #!/usr/bin/env python3
-import logging
-import os
-import random
-import time
-from pathlib import Path
-
 import hydra
-import matplotlib.pyplot as plt
-import numpy as np
 import omegaconf
-import wandb
 from hydra.utils import get_original_cwd
 from omegaconf import DictConfig
 
 
 @hydra.main(version_base="1.3", config_path="./cfgs", config_name="main")
 def train(cfg: DictConfig):
+    import logging
+    import os
+    import random
+    import time
+    from pathlib import Path
+
+    import experiments
+    import matplotlib.pyplot as plt
+    import numpy as np
+    import torch
+    import wandb
+    from dm_env import StepType
+    from experiments.rl.utils import ReplayBuffer, set_seed_everywhere
+
     # This is needed to render videos on GPU
     # os.environ["MUJOCO_GL"] = "egl"
     # os.environ["MUJOCO_GL"] = "osmesa"
-
-    import experiments
-    import torch
-    from dm_env import StepType
-    from experiments.rl.utils import ReplayBuffer, set_seed_everywhere
 
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger(__name__)

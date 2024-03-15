@@ -12,23 +12,20 @@ from scipy.stats import sem
 
 
 LABELS = {
-    "sfr-sample-nn": "\our (NN)",
-    "sfr-sample": "\our",
+    "sfr-sample": "\our (Ours)",
     "mlp": "\sc mlp",
     "ddpg": "\sc ddpg",
     "laplace-sample": "\sc laplace-glm",
     "ensemble-sample": "\sc ensemble",
 }
 COLORS = {
-    "sfr-sample-nn": "c",
-    "sfr-sample": "k",
+    "sfr-sample": "c",
     "mlp": "m",
     "ddpg": "y",
     "laplace-sample": "r",
     "ensemble-sample": "g",
 }
 LINESTYLES = {
-    "sfr-sample-nn": "-",
     "sfr-sample": "-",
     "mlp": "-",
     "ddpg": "-",
@@ -47,10 +44,7 @@ def plot_train_curves(
 
     fig, ax = plt.subplots()
 
-    df = pd.read_csv("rl_data_eval.csv")
-    df = pd.read_csv("./rl_data_eval_thresh=07.csv")
-    df = pd.read_csv("./rl_data_eval_thresh=08.csv")
-    # df = pd.read_csv("rl_data_train.csv")
+    df = pd.read_csv("rl_data.csv")
     print(df)
 
     df["episode"] = df.apply(lambda row: int(row["env_step"] / 1000), axis=1)
@@ -68,6 +62,7 @@ def plot_train_curves(
 
     for agent_name in df.agent.unique():
         agent_df = df_with_stats[df_with_stats["agent"] == agent_name]
+        agent_df = agent_df[~pd.isnull(agent_df["sem"])]
         ax.plot(
             agent_df["episode"].to_numpy(),
             agent_df["mean"].to_numpy(),
@@ -82,15 +77,22 @@ def plot_train_curves(
             alpha=0.1,
             color=COLORS[agent_name],
         )
-        # if agent_name in ["ddpg", "mlp", "ensemble-sample"]:
-        #     ax.plot(
-        #         agent_df["episode"].values,
-        #         np.ones_like(agent_df["episode"]) * np.max(agent_df["mean"].to_numpy()),
-        #         color=COLORS[agent_name],
-        #         linestyle="--",
-        #     )
+        if agent_name in [
+            "ddpg",
+            "mlp",
+            "ensemble-sample",
+            # "laplace-sample",
+            # "sfr-sample",
+        ]:
+            ax.plot(
+                agent_df["episode"].values,
+                np.ones_like(agent_df["episode"]) * np.max(agent_df["mean"].to_numpy()),
+                color=COLORS[agent_name],
+                linestyle="--",
+            )
 
-    ax.set_xlim(0, 100)
+    # breakpoint()
+    ax.set_xlim(0, 50)
     ax.set_xlabel("Episode")
     ax.set_ylabel("Episode Return")
     plt.legend()

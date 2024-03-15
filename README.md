@@ -2,7 +2,7 @@
 Code accompanying ICLR 2024 submission *Function-space Parameterization of Neural Networks for Sequential Learning*.
 This repository contains code for reproducing the experiments in the ICLR 2024 paper.
 Please see [this repo](https://github.com/AaltoML/sfr/tree/main) for a clean and minimal implementation of Sparse Function-space Representation of Neural Networks (SFR).
-
+We recommend using the [clean and minimal repo](https://github.com/AaltoML/sfr/tree/main).
 
 <table>
     <tr>

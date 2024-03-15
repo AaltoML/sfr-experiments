@@ -4,46 +4,54 @@ import wandb
 
 
 WANDB_ENTITY = "aalto-ml"
-# WANDB_PROJECT = "sfr-experiments"
-WANDB_PROJECT = "nn2svgp"
-
+WANDB_PROJECT = "sfr-rl"
 
 WANDB_RUNS = [
     # SFR
-    "1981eud7",  # 100
-    "1y1vf8xk",  # 69
-    "6cud81zp",  # 50
-    "mspoc1tp",  # 666
-    "m20zxspk",  # 54
+    "jf9q1rlx",  # 100
+    "6lzuv74a",  # 69
+    "zlndtzac",  # 50
+    "yvkwf9y5",  # 666
+    "qdrtvc1m",  # 54
+    # "b7si8ixz",  # 100
+    # "qv7sbg15",  # 69
+    # "ied71nvd",  # 50
+    # "e0f4vcg2",  # 666
+    # "1rr0v1qg",  # 54
     # Laplace
-    "ovi8ooil",  # 100
-    "ttgleyig",  # 666
-    "r6j12038",  # 50
-    "zc55qobv",  # 69
-    "p92x5hkv",  # 54
+    "q7lmtzqg",  # 100
+    "femssfbq",  # 666
+    "0z26ul11",  # 50
+    "2uq7ewt9",  # 69
+    "5osqnp6m",  # 54
     # Ensemble
-    "zzcv9ew2",  # 100
-    "bg3cgoze",  # 666
-    "4jtgz6l5",  # 50
-    "afpm5hc2",  # 69
-    "jlumgtyu",  # 54
+    "jxen42b6",  # 100
+    "m11lksm5",  # 666
+    "feddigfn",  # 50
+    "rp90l4mf",  # 69
+    "c9r35pag",  # 54
     # MLP
-    "1ags2von",  # 666
-    "3mnfz5s0",  # 100
-    "nlcicvp0",  # 69
-    "zigq11ow",  # 50
-    "3cxumxzq",  # 54
+    "7zz4c5qp",  # 666
+    "7ad8dh4d",  # 100
+    "ikj6p7dv",  # 69
+    "0zl0f79o",  # 50
+    "rf93ioyo",  # 54
     # DDPG
-    "3vrkzcgo",  # 100
-    "24trnix9",  # 666
-    "2ej235vk",  # 50
-    "rbq90bf5",  # 69
-    "1ytpofrx",  # 54
+    "tz3l2g9x",  # 100
+    "xq5dbhvc",  # 666
+    "g2h4i98c",  # 50
+    "oqr3fm3m",  # 69
+    "ww46ejcr",  # 54
+    # "b7yjffut",  # 100
+    # "zspxa3sd",  # 666
+    # "a947buks",  # 50
+    # "ppkd3wrz",  # 69
+    # "9q7j6cm9",  # 54
 ]
 
 
 TITLES = ["env_step", "episode_return"]
-KEYS = ["train/.env_step", "train/.episode_return"]
+KEYS = ["eval/.env_step", "eval/.episode_return"]
 
 COLUMN_TITLES = {a: b for a, b in zip(KEYS, TITLES)}
 
@@ -72,4 +80,4 @@ def fetch_data(save_path: str = "./rl_data.csv"):
 
 
 if __name__ == "__main__":
-    fetch_data()
+    fetch_data(save_path="./rl_data.csv")

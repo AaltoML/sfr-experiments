@@ -4,7 +4,7 @@
  &  &  &  &  &  &  &  \\
  &  & {\sc model} & $M$ &  &  &  &  \\
 \midrule
-\multirow[c]{27}{*}{\rotatebox[origin=c]{90}{\sc f-mnist}} & \multirow[c]{14}{*}{} & \sc nn map & - & \val{0.23}{0.01} & \val{91.98}{0.44} & \val{0.01}{0.00} & \rebuttal{\val{0.83}{0.05}} \\
+\multirow[c]{31}{*}{\rotatebox[origin=c]{90}{\sc f-mnist}} & \multirow[c]{16}{*}{} & \sc nn map & - & \val{0.23}{0.01} & \val{91.98}{0.44} & \val{0.01}{0.00} & \rebuttal{\val{0.83}{0.05}} \\
  &  & \sc laplace diag & - & \val{2.42}{0.02} & \val{10.21}{0.66} & \val{0.10}{0.02} & \rebuttal{\val{0.50}{0.03}} \\
  &  & \sc laplace kron & - & \val{2.39}{0.01} & \val{9.87}{0.66} & \val{0.07}{0.01} & \rebuttal{\val{0.51}{0.02}} \\
  &  & \sc laplace glm diag & - & \val{1.66}{0.02} & \val{65.19}{2.21} & \val{0.44}{0.02} & \rebuttal{\val{0.67}{0.03}} \\
@@ -18,7 +18,9 @@
  &  &  & 1024 & \val{0.34}{0.03} & \val{91.41}{0.46} & \val{0.12}{0.02} & \rebuttal{\val{\mathbf{0.95}}{\mathbf{0.02}}} \\
  &  &  & 2048 & \val{0.30}{0.01} & \val{\mathbf{91.68}}{\mathbf{0.51}} & \val{0.09}{0.00} & \rebuttal{\val{0.95}{0.02}} \\
  &  &  & 3200 & \val{0.29}{0.02} & \val{\mathbf{91.74}}{\mathbf{0.47}} & \val{0.08}{0.01} & \rebuttal{\val{\mathbf{0.96}}{\mathbf{0.01}}} \\
- & \multirow[c]{13}{*}{\rotatebox[origin=c]{90}{$\delta$ tuning}} & \sc laplace diag & - & \val{1.88}{0.01} & \val{41.02}{4.90} & \val{0.22}{0.06} & \rebuttal{\val{0.64}{0.04}} \\
+ &  & \multirow[c]{2}{*}{\our-{\sc nn} (Ours)} & 512 & \val{0.37}{0.03} & \val{91.31}{0.64} & \val{0.15}{0.01} & \rebuttal{\val{\mathbf{0.97}}{\mathbf{0.02}}} \\
+ &  &  & 3200 & \val{0.31}{0.03} & \val{\mathbf{91.86}}{\mathbf{0.40}} & \val{0.10}{0.02} & \rebuttal{\val{\mathbf{0.97}}{\mathbf{0.01}}} \\
+ & \multirow[c]{15}{*}{\rotatebox[origin=c]{90}{$\delta$ tuning}} & \sc laplace diag & - & \val{1.88}{0.01} & \val{41.02}{4.90} & \val{0.22}{0.06} & \rebuttal{\val{0.64}{0.04}} \\
  &  & \sc laplace kron & - & \val{1.39}{0.01} & \val{82.31}{3.81} & \val{0.55}{0.04} & \rebuttal{\val{0.92}{0.05}} \\
  &  & \sc laplace glm diag & - & \val{0.52}{0.02} & \val{90.97}{0.51} & \val{0.26}{0.01} & \rebuttal{\val{\mathbf{0.96}}{\mathbf{0.02}}} \\
  &  & \sc laplace glm kron & - & \val{0.25}{0.01} & \val{\mathbf{91.78}}{\mathbf{0.54}} & \val{0.05}{0.00} & \rebuttal{\val{0.91}{0.04}} \\
@@ -31,7 +33,9 @@
  &  &  & 1024 & \val{0.34}{0.03} & \val{91.38}{0.55} & \val{0.12}{0.02} & \rebuttal{\val{\mathbf{0.95}}{\mathbf{0.02}}} \\
  &  &  & 2048 & \val{0.30}{0.01} & \val{91.57}{0.44} & \val{0.09}{0.00} & \rebuttal{\val{0.95}{0.02}} \\
  &  &  & 3200 & \val{0.29}{0.02} & \val{\mathbf{91.82}}{\mathbf{0.50}} & \val{0.08}{0.01} & \rebuttal{\val{0.96}{0.01}} \\
-\multirow[c]{27}{*}{\rotatebox[origin=c]{90}{\sc cifar-10}} & \multirow[c]{14}{*}{} & \sc nn map & - & \val{0.69}{0.03} & \val{77.00}{1.04} & \val{0.04}{0.01} & \rebuttal{\val{0.85}{0.02}} \\
+ &  & \multirow[c]{2}{*}{\our-{\sc nn} (Ours)} & 512 & \val{\mathbf{0.23}}{\mathbf{0.01}} & \val{\mathbf{91.87}}{\mathbf{0.55}} & \val{\mathbf{0.01}}{\mathbf{0.00}} & \rebuttal{\val{0.85}{0.05}} \\
+ &  &  & 3200 & \val{\mathbf{0.23}}{\mathbf{0.01}} & \val{\mathbf{92.14}}{\mathbf{0.22}} & \val{\mathbf{0.01}}{\mathbf{0.00}} & \rebuttal{\val{0.86}{0.02}} \\
+\multirow[c]{31}{*}{\rotatebox[origin=c]{90}{\sc cifar-10}} & \multirow[c]{16}{*}{} & \sc nn map & - & \val{0.69}{0.03} & \val{77.00}{1.04} & \val{0.04}{0.01} & \rebuttal{\val{0.85}{0.02}} \\
  &  & \sc laplace diag & - & \val{2.37}{0.05} & \val{10.08}{0.24} & \val{0.06}{0.02} & \rebuttal{\val{0.48}{0.01}} \\
  &  & \sc laplace kron & - & \val{2.36}{0.01} & \val{9.78}{0.41} & \val{0.06}{0.01} & \rebuttal{\val{0.49}{0.01}} \\
  &  & \sc laplace glm diag & - & \val{1.33}{0.05} & \val{71.96}{1.38} & \val{0.39}{0.02} & \rebuttal{\val{\mathbf{0.82}}{\mathbf{0.03}}} \\
@@ -45,7 +49,9 @@
  &  &  & 1024 & \val{0.79}{0.02} & \val{\mathbf{78.39}}{\mathbf{0.89}} & \val{0.20}{0.01} & \rebuttal{\val{0.80}{0.02}} \\
  &  &  & 2048 & \val{0.74}{0.02} & \val{\mathbf{78.40}}{\mathbf{0.83}} & \val{0.16}{0.00} & \rebuttal{\val{0.79}{0.02}} \\
  &  &  & 3200 & \val{0.72}{0.02} & \val{\mathbf{78.48}}{\mathbf{0.98}} & \val{0.14}{0.01} & \rebuttal{\val{0.79}{0.02}} \\
- & \multirow[c]{13}{*}{\rotatebox[origin=c]{90}{$\delta$ tuning}} & \sc laplace diag & - & \val{2.13}{0.01} & \val{28.89}{4.80} & \val{0.14}{0.05} & \rebuttal{\val{0.39}{0.06}} \\
+ &  & \multirow[c]{2}{*}{\our-{\sc nn} (Ours)} & 512 & \val{0.89}{0.02} & \val{75.97}{1.40} & \val{0.22}{0.02} & \rebuttal{\val{0.79}{0.02}} \\
+ &  &  & 3200 & \val{0.79}{0.02} & \val{76.59}{1.21} & \val{0.16}{0.02} & \rebuttal{\val{0.79}{0.03}} \\
+ & \multirow[c]{15}{*}{\rotatebox[origin=c]{90}{$\delta$ tuning}} & \sc laplace diag & - & \val{2.13}{0.01} & \val{28.89}{4.80} & \val{0.14}{0.05} & \rebuttal{\val{0.39}{0.06}} \\
  &  & \sc laplace kron & - & \val{2.13}{0.01} & \val{28.60}{3.03} & \val{0.14}{0.03} & \rebuttal{\val{0.35}{0.06}} \\
  &  & \sc laplace glm diag & - & \val{0.74}{0.04} & \val{\mathbf{76.90}}{\mathbf{1.25}} & \val{0.11}{0.02} & \rebuttal{\val{\mathbf{0.81}}{\mathbf{0.03}}} \\
  &  & \sc laplace glm kron & - & \val{\mathbf{0.69}}{\mathbf{0.03}} & \val{\mathbf{76.95}}{\mathbf{1.12}} & \val{0.05}{0.02} & \rebuttal{\val{\mathbf{0.82}}{\mathbf{0.03}}} \\
@@ -58,5 +64,7 @@
  &  &  & 1024 & \val{0.74}{0.05} & \val{\mathbf{77.19}}{\mathbf{1.12}} & \val{0.12}{0.06} & \rebuttal{\val{\mathbf{0.82}}{\mathbf{0.03}}} \\
  &  &  & 2048 & \val{\mathbf{0.71}}{\mathbf{0.03}} & \val{\mathbf{77.48}}{\mathbf{1.10}} & \val{0.11}{0.05} & \rebuttal{\val{\mathbf{0.82}}{\mathbf{0.03}}} \\
  &  &  & 3200 & \val{\mathbf{0.70}}{\mathbf{0.03}} & \val{\mathbf{77.67}}{\mathbf{1.01}} & \val{0.10}{0.04} & \rebuttal{\val{\mathbf{0.82}}{\mathbf{0.03}}} \\
+ &  & \multirow[c]{2}{*}{\our-{\sc nn} (Ours)} & 512 & \val{\mathbf{0.68}}{\mathbf{0.03}} & \val{\mathbf{76.92}}{\mathbf{1.15}} & \val{\mathbf{0.02}}{\mathbf{0.01}} & \rebuttal{\val{\mathbf{0.84}}{\mathbf{0.02}}} \\
+ &  &  & 3200 & \val{\mathbf{0.68}}{\mathbf{0.03}} & \val{\mathbf{76.94}}{\mathbf{1.16}} & \val{\mathbf{0.02}}{\mathbf{0.01}} & \rebuttal{\val{\mathbf{0.84}}{\mathbf{0.02}}} \\
 \bottomrule
 \end{tabular}
