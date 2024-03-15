@@ -1,0 +1,15 @@
+\begin{tabular}{lccc|c|cccccc}
+\toprule
+ & $N$ & $D$ & $C$ & \sc nn map & \sc Laplace & \sc Laplace glm & {\sc gp} predictive & {\sc gp} subset & \our & \our-{\sc nn} \\
+ &  &  &  &  & full & full & $M = 20\% \text{ of } N$ & $M = 20\% \text{ of } N$ & $M = 20\% \text{ of } N$ & $M = 20\% \text{ of } N$ \\
+\midrule
+\sc Australian & 690 & 14 & 2 & \val{0.33}{0.08} & \val{\mathbf{0.33}}{\mathbf{0.05}} & \val{\mathbf{0.33}}{\mathbf{0.06}} & \val{\mathbf{0.42}}{\mathbf{0.15}} & \val{0.43}{0.04} & \val{\mathbf{0.33}}{\mathbf{0.07}} & \val{\mathbf{0.33}}{\mathbf{0.07}} \\
+\sc Breast cancer & 683 & 10 & 2 & \val{0.10}{0.04} & \val{\mathbf{0.10}}{\mathbf{0.04}} & \val{\mathbf{0.10}}{\mathbf{0.04}} & \val{\mathbf{0.10}}{\mathbf{0.04}} & \val{\mathbf{0.12}}{\mathbf{0.03}} & \val{\mathbf{0.10}}{\mathbf{0.03}} & \val{\mathbf{0.10}}{\mathbf{0.04}} \\
+\sc Digits & 351 & 34 & 2 & \val{0.09}{0.01} & \val{0.14}{0.02} & \val{\mathbf{0.10}}{\mathbf{0.01}} & \val{\mathbf{0.09}}{\mathbf{0.01}} & \val{0.22}{0.09} & \val{0.11}{0.01} & \val{\mathbf{0.09}}{\mathbf{0.01}} \\
+\sc Glass & 214 & 9 & 6 & \val{0.94}{0.16} & \val{\mathbf{0.92}}{\mathbf{0.15}} & \val{\mathbf{0.92}}{\mathbf{0.14}} & \val{\mathbf{0.92}}{\mathbf{0.16}} & \val{1.18}{0.16} & \val{\mathbf{0.92}}{\mathbf{0.05}} & \val{\mathbf{0.93}}{\mathbf{0.17}} \\
+\sc Ionosphere & 846 & 18 & 4 & \val{0.33}{0.06} & \val{\mathbf{0.36}}{\mathbf{0.04}} & \val{\mathbf{0.32}}{\mathbf{0.05}} & \val{\mathbf{0.34}}{\mathbf{0.06}} & \val{\mathbf{0.41}}{\mathbf{0.05}} & \val{\mathbf{0.32}}{\mathbf{0.07}} & \val{\mathbf{0.33}}{\mathbf{0.06}} \\
+\sc Satellite & 1000 & 21 & 3 & \val{0.27}{0.02} & \val{\mathbf{0.30}}{\mathbf{0.01}} & \val{\mathbf{0.27}}{\mathbf{0.02}} & \val{\mathbf{0.51}}{\mathbf{0.57}} & \val{\mathbf{0.34}}{\mathbf{0.01}} & \val{\mathbf{0.26}}{\mathbf{0.02}} & \val{\mathbf{0.27}}{\mathbf{0.02}} \\
+\sc Vehicle & 1797 & 64 & 10 & \val{0.35}{0.05} & \val{\mathbf{0.37}}{\mathbf{0.04}} & \val{\mathbf{0.35}}{\mathbf{0.05}} & \val{\mathbf{0.34}}{\mathbf{0.05}} & \val{0.46}{0.04} & \val{\mathbf{0.35}}{\mathbf{0.05}} & \val{\mathbf{0.34}}{\mathbf{0.05}} \\
+\sc Waveform & 6435 & 35 & 6 & \val{0.33}{0.01} & \val{\mathbf{0.33}}{\mathbf{0.01}} & \val{\mathbf{0.33}}{\mathbf{0.01}} & \val{\mathbf{0.33}}{\mathbf{0.01}} & \val{0.40}{0.05} & \val{\mathbf{0.32}}{\mathbf{0.02}} & \val{\mathbf{0.33}}{\mathbf{0.01}} \\
+\bottomrule
+\end{tabular}
